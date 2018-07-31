@@ -1,0 +1,116 @@
+﻿body {
+    background-image:none;
+background-size: cover;
+}
+
+
+.h {
+    width: 1100px;
+    height: 220px;
+    margin-top: -60px;
+    margin-left: 30px;
+}
+.home {
+    background-color: lightgrey;
+    width: 1100px;
+    height: 1000px;
+    margin-top: -45px;
+    margin-left: 30px;
+}
+
+.box {
+    background: black;
+    display: grid;
+    width: 1100px;
+    height: 1000px;
+    margin-top: -3px;
+    margin-left: 10px;
+}
+
+.fullscreen {
+    width: 1100px;
+    height: 400px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* 	position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bg-image 20s ease-in-out infinite;
+}
+
+
+@keyframes bg-image {
+    0% {
+        background-image: url(https://nerdist.com/wp-content/uploads/2017/05/C9TuSaDWAAAXJ0b.jpg);
+    }
+
+    20% {
+        background-image: url(https://scontent.fdub1-2.fna.fbcdn.net/v/t1.0-9/10850113_757702750988697_4081218613481436370_n.png?_nc_cat=0&oh=2db9a544bd7374085f6f24c9a6f60d91&oe=5B74B3FE);
+    }
+
+    40% {
+        background-image: url(https://scontent.fdub1-2.fna.fbcdn.net/v/t1.0-9/305954_10151152173874007_209942124_n.jpg?_nc_cat=0&oh=bcb9c16c74b9b7624b6b6eeadec838a6&oe=5B73D5B8);
+    }
+
+    60% {
+        background-image: url(https://scontent.fdub1-2.fna.fbcdn.net/v/t1.0-9/14656396_563027033867498_2056000199121798388_n.png?_nc_cat=0&oh=1484c1b58f42d09288a908510216e3a6&oe=5B294E82);
+    }
+
+    80% {
+        background-image: url(https://scontent.fdub1-2.fna.fbcdn.net/v/t1.0-9/11027456_10152974904583999_3335523504515165704_n.jpg?_nc_cat=0&oh=2f7f3272b22714f5f84d868fb84cdc01&oe=5B2D8AB8);
+    }
+
+    100% {
+        background-image: url(http://cdn.wegotthiscovered.com/wp-content/uploads/2016/11/supergirl-crossover-poster-banner.jpg);
+    }
+}
+.video {
+}
+
+    .video iframe {
+        margin-top: -400px;
+        width: 300px;
+        height: 200px;
+        padding:10px;
+        margin-left:45px;
+    }
+
+
+
+#vid-left {
+    float: left;
+
+
+}
+
+#vid-mid {
+    float: left;
+}
+
+#vid-right {
+    float: left;
+}
+
+#vid-l {
+    float: left;
+    margin-top:180px;
+}
+#vid-m {
+    float: left;
+    margin-top: 180px;
+}
+#vid-r {
+    float: left;
+    margin-top: 180px;
+}
+h1 {
+    color: white;
+    font-weight: bold;
+    height: 2px;
+    margin-top: -120px;
+    padding: 15px;
+}

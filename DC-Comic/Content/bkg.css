@@ -1,0 +1,27 @@
+﻿
+.kk {
+    width: 850px;
+    height: 320px;
+    margin-bottom: 23px;
+    margin-left: -130px;
+}
+dt{
+    color:lightsalmon;
+    font-size:1.2em;
+    font-weight:bold;
+}
+dd {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.dl-horizontal{
+}
+
+main {
+    background-image: url("https://www.dailydot.com/wp-content/uploads/aec/6d/ebba8ec38986ac06b37c74342354d250.jpg");
+    width: 1000px;
+    height: 620px;
+    margin-top: 57px;
+    margin-left: 80px;
+}

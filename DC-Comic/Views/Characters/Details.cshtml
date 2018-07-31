@@ -1,0 +1,60 @@
+﻿@model DC_Comic.Models.Character
+
+@{
+    ViewBag.Title = "Details";
+    @Styles.Render("~/Content/bkg.css")
+
+}
+
+
+<main>
+    <dl class="dl-horizontal">
+
+        <dd>
+            @{ var imagePath = "~/Content/Images/" + Model.picString;
+
+
+                <img class="kk" src="@Url.Content(imagePath)" alt="Sample Image" />
+            }
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Powers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Powers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</main>

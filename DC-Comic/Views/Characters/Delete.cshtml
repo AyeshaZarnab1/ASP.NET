@@ -1,0 +1,50 @@
+﻿@model DC_Comic.ViewModels.CharacterFormViewModel
+@{
+    ViewBag.Title = "Delete";
+    @Styles.Render("~/Content/dc.less")
+}
+<main>
+@using (Html.BeginForm("Delete", "Characters"))
+{
+    <fieldset disabled>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Name)
+            @Html.TextBoxFor(m => m.Character.Name, new { @class = "form-control" })
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Powers)
+            @Html.TextBoxFor(m => m.Character.Powers, new { @class = "form-control" })
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Occupation)
+            @Html.TextBoxFor(m => m.Character.Occupation, new { @class = "form-control" })
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Location)
+            @Html.TextBoxFor(m => m.Character.Location, new { @class = "form-control" })
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Alignment)
+            @Html.DropDownListFor(m => m.Character.AlignmentId, new SelectList(Model.Alignment, "Id", "alignmentType"), "Select alignment type", new { @class = "form-control" })
+
+        </div>
+
+
+    </fieldset>
+    @Html.HiddenFor(m => m.Character.Id)
+
+    <div class="form-group">
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @Html.HiddenFor(m => m.Character.Id)
+}
+  </main>

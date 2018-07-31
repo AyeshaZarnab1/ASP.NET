@@ -1,0 +1,53 @@
+﻿@model DC_Comic.ViewModels.CharacterFormViewModel
+
+@{
+
+    ViewBag.Title = "New";
+    @Styles.Render("~/Content/dc.less")
+
+
+}
+
+<main>
+@using (Html.BeginForm("Save", "Characters", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+            <div class="form-group">
+            @Html.LabelFor(m => m.Character.Name)
+            @Html.TextBoxFor(m => m.Character.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Character.Name)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Powers)
+            @Html.TextBoxFor(m => m.Character.Powers, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Character.Powers)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Occupation)
+            @Html.TextBoxFor(m => m.Character.Occupation, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Character.Occupation)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Location)
+            @Html.TextBoxFor(m => m.Character.Location, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Character.Location)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Character.Alignment)
+            @Html.DropDownListFor(m => m.Character.AlignmentId, new SelectList(Model.Alignment, "Id", "alignmentType"), "Select alignment type", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Character.Name)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ImageFile)
+            @Html.TextBoxFor(m => m.ImageFile, new { @class = "form-control", type = "file" })
+        </div>
+
+        @Html.HiddenFor(m => m.Character.Id)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary">Save</button>
+}
+    </main>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

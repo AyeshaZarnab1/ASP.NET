@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DC_Comic.Models.Character>
+@{
+    /**/
+
+    ViewBag.Title = "character";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/index.css")
+
+
+}
+
+@if (!Model.Any())
+{
+    <p> No charachters</p>
+
+}
+    <main>
+        <div class="adbtn">@Html.ActionLink("ADD NEW", "New", "Characters")</div>
+
+        @foreach (var vad in Model)
+        { 
+
+        var imagePath = "~/Content/Profile/" + vad.profilePic;
+        <a href='@Url.Action("Details", "Characters", new { id = vad.Id})'>
+           <img class="pp" src="@Url.Content(imagePath)" />
+
+        </a>
+}
+    </main>
